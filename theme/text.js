@@ -119,7 +119,42 @@ export const HomeText = StyleSheet.create({
 		fontWeight: "bold",
 		marginTop: 10,
 		marginBottom: 20
+	},
+
+	other_crop_title: {
+		fontWeight: "bold",
+	},
+
+	my_crop_title: {
+		fontWeight: "bold",
+		color: "#888459",
+		position: "absolute",
+		top: wp("5%"),
+		fontSize: 20,
 	}
 
 })
+
+export const CropDetailText = StyleSheet.create({
+
+	title: {
+		fontSize: 18,
+		fontWeight: "bold",
+		color: "#09200d",
+		marginBottom: hp("1%"),
+	},
+
+	desc: {
+		fontSize: 13,
+		color: "#bcc4c9",
+		lineHeight: 25,
+	},
+
+	guide_title: {
+		fontSize:15,
+		fontWeight: "bold",
+		marginBottom: 5
+	}
+})
+
 

@@ -17,6 +17,7 @@ import REGISTERSCREEN from "../screens/register"
 import StartScreen from "../screens/start"
 
 import HomeScreen from "../screens/home"
+import CropDetailScreen from "../screens/home/crop_detail"
 import ProfileScreen from "../screens/profile"
 import ScheduleScreen from "../screens/schedule"
 
@@ -42,6 +43,8 @@ const customDrawerContentComponent = (props) => (
 )
 
 
+
+
 const mainBottomNavigator = createMaterialBottomTabNavigator(
  {
    Home: {
@@ -62,7 +65,7 @@ const mainBottomNavigator = createMaterialBottomTabNavigator(
      navigationOptions: {
        tabBarIcon: ({tintColor})  => (
            <View>
-             <Icon style={[{color:tintColor}]} size={27} name={'group'}/>
+             <Icon style={[{color:tintColor}]} size={27} name={'schedule'}/>
            </View>
          )
      }
@@ -110,6 +113,9 @@ const HomeStackNavigator= createStackNavigator(
      Tabs:{
        screen:mainBottomNavigator
      },
+     CropDetail: {
+       screen: CropDetailScreen
+     }
    },
    {
      defaultNavigationOptions:({navigation}) =>{
@@ -133,7 +139,6 @@ const HomeStackNavigator= createStackNavigator(
            elevation: 0,
            shadowOpacity: 0,
            height: 0,
-           marginTop: 0,
          },
          
     

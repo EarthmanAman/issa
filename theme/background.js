@@ -239,6 +239,135 @@ export const HomeBack = StyleSheet.create({
 	
 	my_crops: {
 		alignItems: "flex-start",
-		width: wp("90%")
-	}
+		width: wp("90%"),
+		marginVertical: hp("2%"),
+	},
+
+	my_crop: {
+		backgroundColor: "#ffffff",
+		width: wp("40%"),
+		height: hp("20%"),
+		alignItems: "center",
+		borderRadius: 10,
+		elevation: 2,
+		marginRight: wp("3%"),
+		position: "relative",
+	},
+
+	my_crop_image: {
+		width: wp("40%"),
+		height: hp("20%"),
+		borderRadius: 10,
+		opacity: 0.8,
+	},
+
+	other_crop_image: {
+		width: wp("35%"),
+		height: hp("14%"),
+		marginVertical: hp("1%"),
+		borderRadius: 10,
+		opacity: 0.8,
+	},
+
+	other_crops_pair: {
+		flexDirection: "row",
+		marginBottom: 10,
+	},
+
+	
+})
+
+
+export const CropDetailBack = StyleSheet.create({
+	main: {
+		height:hp("100%"),
+		width:wp("100%"),
+	
+		alignItems: "center",
+		backgroundColor: "#ffffff"
+
+	},
+
+	crop_detail_image_view: {
+		width: wp("100%"),
+		height: hp("40%"),
+		position: "relative",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+
+	crop_detail_image: {
+		width: wp("100%"),
+		height: hp("40%"),
+		borderRadius: 20,
+	},
+
+	crop_detail_content: {
+		width: wp("100%"),
+		height: hp("60%"),
+		elevation: 1,
+		borderRadius: 20,
+		backgroundColor: "#ffffff",
+	},
+
+	title: {
+		marginVertical: hp("2%"),
+		paddingHorizontal: wp("7%"),
+
+	},
+
+	guide: {
+		marginVertical: hp("2%"),
+		paddingHorizontal: wp("7%"),
+		
+	},
+
+	guide_row: {
+		flexDirection: "row",
+		padding: 20,
+		backgroundColor: "whitesmoke",
+		borderRadius: 5,
+		elevation: 0.5,
+		marginVertical: hp("1%"),
+	},
+
+	guide_icon: {
+		width: wp("10%"),
+		alignItems: "center",
+		justifyContent: "center",
+	},
+
+	add_view: {
+		width: wp("100%"),
+		alignItems: "center",
+		position: "absolute",
+		elevation: 5
+	},
+
+	add: {
+		width: wp("30%"),
+		height: hp("5%"),
+		paddingVertical: 10,
+		paddingHorizontal: 20,
+		borderRadius: 10,
+		backgroundColor: "white",
+		alignItems: "center",
+		justifyContent: "center",
+		elevation: 5
+	},
+
+	back: {
+		width: wp("10%"),
+		height: hp("4%"),
+		backgroundColor: "#0e6416",
+		padding: 10,
+		borderRadius: 20,
+		alignItems: "center",
+		justifyContent: "center",
+		position: "absolute",
+		left: wp("10%"),
+		elevation:10,
+		top: hp("8%"),
+	},
+	
 })
