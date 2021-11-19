@@ -134,29 +134,29 @@ export const RegisterBack = StyleSheet.create({
 
 	topIcon: {
 		width: wp("75%"),
-		marginTop: hp("3%"),
+		marginTop: hp("2%"),
 		alignItems: "flex-start"
 	},
 
 	welcome: {
 		width: wp("75%"),
 		alignItems: "flex-start",
-		marginTop: hp("2%"),
+		marginTop: hp("0.5%"),
 	},
 
 	input_field: {
 		marginBottom:5, 
 		backgroundColor:"#d8d4a6",
-		height: hp("6%"),
+		height: hp("4%"),
 	},
 	input: {
 		width: wp("75%"),
-		marginTop:wp("8%")
+		marginTop:wp("3%")
 	},
 
 	bottom: {
 		position: "absolute",
-		bottom: hp("15%"),
+		bottom: hp("25%"),
 		alignItems: "center"
 	},
 
@@ -371,3 +371,202 @@ export const CropDetailBack = StyleSheet.create({
 	},
 	
 })
+
+
+export const MyCropBack = StyleSheet.create({
+	main: {
+		marginTop: statusPerc + hp("8%"),
+		alignItems: "center"
+	},
+
+	pie: {
+		marginBottom: hp("2%"),
+		width: wp("90%"),
+		backgroundColor: "#bcc4c9",
+		paddingVertical: hp("2%"),
+		borderRadius: 10
+
+	},
+
+	back: {
+		width: wp("10%"),
+		height: hp("4%"),
+		backgroundColor: "#0e6416",
+		padding: 10,
+		borderRadius: 20,
+		alignItems: "center",
+		justifyContent: "center",
+		position: "absolute",
+		left: wp("5%"),
+		elevation:10,
+		top: hp("1%"),
+	},
+
+	table: {
+		marginBottom: hp("2%"),
+		width: wp("90%"),
+
+	},
+
+	schedules: {
+		width: wp("90%"),
+		height: hp("40%"),
+	}
+})
+
+export const PieBack = StyleSheet.create({
+	legends: {
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "center",
+
+	},
+
+	legend: {
+		flexDirection: "row",
+		marginRight: wp("5%"),
+		alignItems: "center",
+	},
+
+	completed_view: {
+		width: wp("4%"),
+		height: wp("4%"),
+		backgroundColor: "green",
+		marginRight: wp("2%"),
+	},
+	uncompleted_view: {
+		width: wp("4%"),
+		height: wp("4%"),
+		backgroundColor: "red",
+		marginRight: wp("2%"),
+	}
+})
+
+
+export const IndvChemicalBack = StyleSheet.create({
+	main:{
+		alignItems: "center",
+		top: statusPerc + hp("10%"),
+	},
+
+	video: {
+		width: wp("90%"),
+		height: hp("26%"),
+	},
+
+	instructions: {
+		width: wp("80%"),
+		
+	},
+
+	guide: {
+		marginVertical: hp("1%"),
+		paddingHorizontal: wp("7%"),
+		
+	},
+
+	guide_row: {
+		flexDirection: "row",
+		padding: 20,
+		backgroundColor: "whitesmoke",
+		borderRadius: 5,
+		elevation: 0.5,
+		marginVertical: hp("1%"),
+	},
+})
+
+
+
+export const ChemicalBack = StyleSheet.create({
+	main: {
+		
+		height:hp("100%"),
+		width:wp("100%"),
+		paddingHorizontal: wp("5%")
+
+	},
+
+	my_chem: {
+		width: wp("35%"),
+		position: "relative",
+		backgroundColor: "white",
+		alignItems: "center",
+		justifyContent: "center",
+		borderRadius: 10,
+		paddingBottom: 20,
+		marginRight: 10,
+		marginBottom: 10
+	},
+	my_chem_image: {
+		width: wp("25%"),
+		height: hp("8%"),
+		marginTop: 20,
+		marginBottom: 10,
+		borderRadius: 5,
+	},
+
+	others: {
+		marginTop: hp("2%"),
+	},
+
+	other: {
+		flexDirection: "row",
+	},
+	other_chem: {
+		width: wp("42%"),
+		position: "relative",
+		backgroundColor: "white",
+		alignItems: "center",
+		justifyContent: "center",
+		borderRadius: 10,
+		paddingBottom: 20,
+		marginRight: 10,
+		marginBottom: 10
+	},
+
+	other_chem_image: {
+		width: wp("35%"),
+		height: hp("13%"),
+		marginTop: 20,
+		marginBottom: 10,
+		borderRadius: 5,
+	},
+	
+})
+
+
+export const ProfileBack = StyleSheet.create({
+	main: {
+		
+		height:hp("100%"),
+		width:wp("100%"),
+		paddingHorizontal: wp("5%"),
+		position: "relative"
+
+	},
+
+	buttons: {
+		width: wp("90%"),
+		flexDirection: "row",
+		justifyContent: "flex-end",
+	},
+	
+	edit_button: {
+		paddingHorizontal: 30,
+		paddingVertical:5,
+		backgroundColor: "lightblue",
+		marginHorizontal: 10,
+		marginVertical: 15,
+		borderRadius: 5,
+	},
+
+	password_button: {
+		paddingHorizontal: 30,
+		paddingVertical:5,
+		backgroundColor: "skyblue",
+
+		marginVertical: 15,
+		borderRadius: 5,
+	},
+})
+

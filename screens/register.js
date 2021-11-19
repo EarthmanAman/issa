@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import { Text, View, StyleSheet, TextInput, TouchableOpacity, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';  
 import { Input, Button, Center, NativeBaseProvider } from "native-base"
 import {connect} from "react-redux";
@@ -129,7 +129,7 @@ class RegisterScreen extends Component {
 			<View style={RegisterBack.welcome}> 
 				<Text style={RegisterText.welcome_top}>Let's sign you up.</Text>
 			</View>
-
+      <ScrollView>
 			<View style={RegisterBack.input}>
 				{this.props.errors ? <Text style={RegisterText.error}></Text>: null}
         {this.state.empty ? <Text style={RegisterText.error}>All the fields must be filled correctly</Text>: null}
@@ -138,7 +138,7 @@ class RegisterScreen extends Component {
         {this.state.first_name_error ? <Text style={RegisterText.error}>{this.state.first_name_error}</Text>: null}
         <Input
 		          variant="filled"
-		          placeholder="First name"
+		          
 		          defaultValue={this.state.first_name}
 		          style={RegisterBack.input_field}
 		          onChangeText={(text) => this.setState({first_name:text, empty:false})}
@@ -148,7 +148,7 @@ class RegisterScreen extends Component {
         {this.state.last_name_error ? <Text style={RegisterText.error}>{this.state.last_name_error}</Text>: null}
           <Input
               variant="filled"
-              placeholder="Last name"
+              
               defaultValue={this.state.last_name}
               style={RegisterBack.input_field}
               onChangeText={(text) => this.setState({last_name:text, empty:false})}
@@ -158,7 +158,7 @@ class RegisterScreen extends Component {
             {this.state.phone_no_error ? <Text style={RegisterText.error}>{this.state.phone_no_error}</Text>: null}
             <Input
               variant="filled"
-              placeholder="Phone number"
+              
               defaultValue={this.state.username}
               style={RegisterBack.input_field}
               onChangeText={(text) => this.setState({username:text, username_empty:null, empty:false})}
@@ -167,7 +167,7 @@ class RegisterScreen extends Component {
             <Text>Email</Text>
             <Input
               variant="filled"
-              placeholder="Email"
+              
               defaultValue={this.state.email}
               style={RegisterBack.input_field}
               onChangeText={(text) => this.setState({email:text, empty:false})}
@@ -191,7 +191,7 @@ class RegisterScreen extends Component {
 			        </Button>
 			      }
 			      style={RegisterBack.input_field}
-			      placeholder="Password"
+			      
 			      onChangeText={(text) => this.setState({password:text, password_empty:false, empty:false})}
 			    />
 
@@ -211,10 +211,11 @@ class RegisterScreen extends Component {
               </Button>
             }
             style={RegisterBack.input_field}
-            placeholder="Confirm Password"
+            
             onChangeText={(text) => this.setState({confirm_password:text, password_empty:false, empty:false})}
           />
 			</View>
+      </ScrollView>
 
 			<View style={RegisterBack.bottom}>
 				<View style={RegisterBack.bottom_register}>

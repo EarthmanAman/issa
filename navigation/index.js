@@ -18,29 +18,18 @@ import StartScreen from "../screens/start"
 
 import HomeScreen from "../screens/home"
 import CropDetailScreen from "../screens/home/crop_detail"
+import MyCropScreen from "../screens/home/my_crop"
+
 import ProfileScreen from "../screens/profile"
 import ScheduleScreen from "../screens/schedule"
+import ChemicalScreen from "../screens/chemical"
+
+import IndvChemicalScreen from "../screens/chemical/chemical"
+
+import customDrawerContentComponent from "./drawer_header"
 
 const {height, width} = Dimensions.get('window')
 
-const customDrawerContentComponent = (props) => (
-
-  <View>
-    <Header style={{backgroundColor:"lightblue", height:150}}>
-      <Body style={{margin:20, width:200, height:60, flexDirection: "row", alignItems:"center", justifyContent:"space-between"}}>
-        
-          <Image source={require("../assets/login.png")} style={{height:100, width:100, borderRadius:100}}/>
-          <TouchableOpacity style={{marginTop:5, width:90, height:30, alignItems:"center", justifyContent:"center", borderRadius:5, backgroundColor:"brown"}}>
-            <Text style={{color:"#FFFFFF"}}>Log out</Text>
-          </TouchableOpacity>
-      </Body>
-    </Header>
-    <Content>
-      <DrawerItems {...props} />
-    </Content>
-  </View>
-
-)
 
 
 
@@ -72,6 +61,17 @@ const mainBottomNavigator = createMaterialBottomTabNavigator(
    },
 
 
+   Chemical: {
+     screen: ChemicalScreen,
+     navigationOptions: {
+       tabBarIcon: ({tintColor})  => (
+           <View>
+             <Icon style={[{color:tintColor}]} size={27} name={'science'}/>
+           </View>
+         )
+     }
+   }, 
+   
    Profile: {
      screen: ProfileScreen,
      navigationOptions: {
@@ -81,8 +81,7 @@ const mainBottomNavigator = createMaterialBottomTabNavigator(
            </View>
          )
      }
-   }, 
- 
+   },
  },
   
 {
@@ -115,6 +114,10 @@ const HomeStackNavigator= createStackNavigator(
      },
      CropDetail: {
        screen: CropDetailScreen
+     },
+
+     MyCrop: {
+       screen: MyCropScreen
      }
    },
    {
@@ -148,6 +151,45 @@ const HomeStackNavigator= createStackNavigator(
 
   )
 
+const ChemicalStackNavigator= createStackNavigator(
+   {
+     Chemicals:{
+       screen:ChemicalScreen
+     },
+     IndvChemical: {
+       screen: IndvChemicalScreen,
+     }
+   },
+   {
+     defaultNavigationOptions:({navigation}) =>{
+       return{
+         headerLeft:(
+             <Icon 
+               name="sort" 
+               size={30}
+               onPress={() => navigation.openDrawer()} 
+               style={{
+                 color:"#0e6416",
+                 marginLeft: 10,
+               }}
+              />
+           ),
+         headerLeftContainerStyle:{marginLeft:10},
+         headerStyle: {
+           backgroundColor:"#F0F2FA",
+
+           borderBottomWidth: 0,
+           elevation: 0,
+           shadowOpacity: 0,
+           height: 0,
+         },
+         
+    
+       }
+     }
+   },
+
+  )
 
 const drawerNavigator = createDrawerNavigator(
     {
@@ -158,9 +200,15 @@ const drawerNavigator = createDrawerNavigator(
       Schedule: {
         screen:ScheduleScreen
       },
+      Chemical: {
+        screen:ChemicalStackNavigator
+      },
 
       Profile: {
         screen:ProfileScreen
+      },
+      StartPage: {
+        screen: StartScreen
       },
      
     },
@@ -192,7 +240,7 @@ const switchNavigator = createAnimatedSwitchNavigator(
       }
     },
     {
-      initialRouteName:"Other",
+      initialRouteName:"Start",
       transition: (
       <Transition.Together>
         <Transition.Out

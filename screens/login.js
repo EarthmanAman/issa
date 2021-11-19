@@ -84,9 +84,7 @@ class LoginScreen extends Component {
 
   componentDidMount = async() => {
   	this.props.LOGIN_ERROR_REMOV()
-  	if(this.props.user.token){
-  		this.props.navigation.navigate("Other")
-  	}
+  	
   }
   render() {
 
@@ -107,7 +105,7 @@ class LoginScreen extends Component {
 				{this.state.username_empty ? <Text style={LoginText.error}>Username cannot be empty</Text>: null}
 				<Input
 		          variant="filled"
-		          placeholder="Username"
+		          placeholder="Phone number"
 		          defaultValue={this.state.username}
 		          style={{marginBottom:13, backgroundColor:"#d8d4a6"}}
 		          onChangeText={(text) => this.setState({username:text, username_empty:false})}

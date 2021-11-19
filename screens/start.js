@@ -14,8 +14,8 @@ export default class StartScreen extends Component {
 			</View>
 
 			<View style={StartBack.head}>
-				<Text style={StartText.head}>Smart Farming Association</Text>
-				<Text style={StartText.desc}>Learner Competency Measurement System is a platform which helps teachers all across the country to have a digital storage of their pupil performance</Text>
+				<Text style={StartText.head}>Smart Farm</Text>
+				<Text style={StartText.desc}>Smart Farming application is an application which provide all your needs as a farmer in one place. From crop scheduling to what fertilizer to use.</Text>
 			</View>
 			
 			<View style={StartBack.buttons}>

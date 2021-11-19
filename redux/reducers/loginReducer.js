@@ -5,6 +5,11 @@ import {
 	REGISTER_SUCCESS,
 	REGISTER_ERROR,
 	REGISTER_ERROR_REMOVE,
+
+	UPDATE_USER,
+	UPDATE_USER_ERROR,
+	CHANGE_PASSWORD,
+	CHANGE_PASSWORD_ERROR,
 } from "../redux_actions/action_types"
 
 const merge = (prev, next) => Object.assign({}, prev, next)
@@ -36,7 +41,21 @@ const LoginReducer = (state={}, action) => {
 			
 			return merge(state, {registerError:{main:action.payload}})
 			break;
-		
+
+		case UPDATE_USER:
+			return merge(state, {update_user:action.payload})
+			break;
+
+		case UPDATE_USER_ERROR:
+			return merge(state, {update_user_error:action.payload})
+			break;
+		case CHANGE_PASSWORD:
+			return merge(state, {change_password:action.payload, user:null})
+			break;
+
+		case CHANGE_PASSWORD_ERROR:
+			return merge(state, {change_password_error:action.payload})
+			break;
 		default:
 			return state
 			break;

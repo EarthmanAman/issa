@@ -158,3 +158,37 @@ export const CropDetailText = StyleSheet.create({
 })
 
 
+export const ChemicalText = StyleSheet.create({
+
+	heading: {
+		fontWeight: "bold",
+		marginTop: 10,
+		marginBottom: 10,
+		marginLeft: wp("3%")
+	},
+
+	my_chem_title: {
+		fontSize: 13,
+		fontWeight: "bold",
+		textAlign: "center",
+		color: "#0e6416",
+	},
+
+	my_chem_cat: {
+		fontSize: 10,
+		textAlign: "center",
+	},
+
+})
+
+
+export const ProfileText = StyleSheet.create({
+
+	heading: {
+		fontWeight: "bold",
+		marginTop: 10,
+		marginBottom: 10,
+		marginLeft: wp("3%")
+	},
+
+})
