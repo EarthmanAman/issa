@@ -39,11 +39,10 @@ class HomeScreen extends Component {
     this.props.navigation.navigate("CropDetail")
   }
   componentDidMount = async () => {
-    if(this.props.user == null){
-      this.props.navigation.navigate("Start")
-    }
-    await this.props.CROPS_ACTION()
+    
     await this.props.MAIN_ACTION(this.props.user.id)
+    await this.props.CROPS_ACTION()
+    
     await this.props.CHEMICALS_ACTION()
     let crops = this.props.crops
 
@@ -68,7 +67,7 @@ class HomeScreen extends Component {
   render() {
    
    const first = this.props.main.main_schedule
-   console.log(this.props.user)
+   console.log(this.props.main)
     return (
         <View style={HomeBack.main}>
           <ScrollView>
@@ -89,7 +88,7 @@ class HomeScreen extends Component {
                 <Text style={HomeText.day}>{first.date.weekday}</Text>
               </View>
             </View>
-          </View>: <Text>No schedule to display</Text>
+          </View>: <Text style={{marginTop:20, fontSize:15, color:"brown", marginLeft: 40}}>No schedule to display</Text>
           }
         	
 
@@ -100,7 +99,8 @@ class HomeScreen extends Component {
 
 				<ScrollView horizontal={true}>
 
-          {this.props.main.crops.map((crop) => 
+          {this.props.main.crops.length > 0 ?
+          this.props.main.crops.map((crop) => 
             <TouchableOpacity 
               style={HomeBack.my_crop}
               onPress={() => this.handleMyCropsPressed(crop)}
@@ -109,7 +109,7 @@ class HomeScreen extends Component {
               <Text style={HomeText.my_crop_title}>{crop.crop.name}</Text>
             </TouchableOpacity>
 
-          )}
+          ): <Text style={{marginTop:20, fontSize:15, color:"brown", marginLeft: 40}}>You have not selected any crop</Text>}
 					
 				</ScrollView>
 			</View>	

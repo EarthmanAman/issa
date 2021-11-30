@@ -23,6 +23,7 @@ import MyCropScreen from "../screens/home/my_crop"
 import ProfileScreen from "../screens/profile"
 import ScheduleScreen from "../screens/schedule"
 import ChemicalScreen from "../screens/chemical"
+import SearchScreen from "../screens/search"
 
 import IndvChemicalScreen from "../screens/chemical/chemical"
 
@@ -48,7 +49,17 @@ const mainBottomNavigator = createMaterialBottomTabNavigator(
    },
 
    
-  
+  Search: {
+     screen: SearchScreen,
+     navigationOptions: {
+       tabBarIcon: ({tintColor})  => (
+           <View>
+             <Icon style={[{color:tintColor}]} size={27} name={'search'}/>
+           </View>
+         )
+     }
+   }, 
+
    Schedule: {
      screen: ScheduleScreen,
      navigationOptions: {

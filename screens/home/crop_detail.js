@@ -56,6 +56,11 @@ class CropDetail extends Component {
     }
   }
 
+  handleBack = () => {
+    this.props.MAIN_ACTION(this.props.user.id)
+    this.props.navigation.goBack()
+  }
+
   render() {
 
     console.log(this.props.crop_add)
@@ -107,10 +112,10 @@ class CropDetail extends Component {
             </TouchableOpacity>
           </View>
 
-          {this.state.added_success ? <Text>Added successful</Text>:null}
+          {this.state.added_success ? <Text style={{position: "absolute", top:100, color:"green", fontWeight:"bold"}}>Added successful</Text>:null}
           <TouchableOpacity 
             style={CropDetailBack.back}
-            onPress={() => this.props.navigation.goBack()}
+            onPress={this.handleBack}
           >
             <Icon name={"arrow-back"} size={20} style={{color: "#d7dcdf"}}/>
           </TouchableOpacity>

@@ -570,3 +570,61 @@ export const ProfileBack = StyleSheet.create({
 	},
 })
 
+export const SearchBack = StyleSheet.create({
+	main: {
+		top: hp(statusPerc),
+		height:hp("100%"),
+		width:wp("100%"),
+		backgroundColor:"whitesmoke",
+	
+		alignItems: "center",
+		position: "relative",
+	},
+
+	topIcon: {
+		width: wp("75%"),
+		marginTop: hp("3%"),
+		alignItems: "flex-start"
+	},
+
+	welcome: {
+		width: wp("75%"),
+		alignItems: "flex-start",
+		marginTop: hp("2%"),
+	},
+
+	input: {
+		width: wp("60%"),
+		height:hp("5%"),
+		marginRight: 8,
+		backgroundColor: "grey",
+		paddingHorizontal: 15,
+		borderRadius: 5
+	},
+
+	bottom: {
+		position: "absolute",
+		bottom: hp("15%"),
+		alignItems: "center"
+	},
+
+	bottom_register: {
+		flexDirection: "row",
+		marginBottom:15,
+	},
+
+	button: {
+		width: wp("20%"),
+		height:hp("5%"),
+		borderRadius:10,
+		backgroundColor: "#888459",
+		alignItems:"center",
+		justifyContent: "center",
+	},
+
+	search: {
+		flexDirection: "row",
+		marginBottom: 20
+	}
+
+})
