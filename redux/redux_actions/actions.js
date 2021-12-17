@@ -157,7 +157,7 @@ export const UPDATE_USER_ACTION = (user_id, username,first_name, last_name, emai
 
 export const CHANGE_PASSWORD_ACTION = (user_id, old_pass, new_pass) =>async dispatch => {
 	let token;
-	console.log("in actionssss")
+	
 	await change_password(user_id, old_pass, new_pass).then(data => {
 	 		token = data
 	 		

@@ -31,7 +31,7 @@ export default class ScheduleScreen extends Component {
     this.props.navigation.navigate("IndvChemical")
   }
   render() {
-
+    
     return (
       <Agenda
         items={this.props.schedules}
@@ -68,14 +68,18 @@ export default class ScheduleScreen extends Component {
         style={[styles.item]}
         onPress={this.handleChemPress}
       >
-        <Text>{item.name}</Text>
+        <Text style={{fontWeight:"bold", marginBottom:10, color:"green"}}>{item.crop}</Text>
+        <Text style={{fontWeight: "bold", marginBottom:5}}>{item.name}</Text>
+        <Text>{item.activity}</Text>
       </TouchableOpacity>:  
 
       <TouchableOpacity
 
         style={[styles.item]}
       >
-        <Text>{item.name}</Text>
+        <Text style={{fontWeight:"bold", marginBottom:10, color:"green"}}>{item.crop}</Text>
+        <Text style={{fontWeight: "bold", marginBottom:5}}>{item.name}</Text>
+        <Text>{item.activity}</Text>
       </TouchableOpacity>}
       </View>
     );
@@ -104,11 +108,16 @@ const styles = StyleSheet.create({
     padding: 10,
     marginRight: 10,
     marginTop: 17,
-    height: 50,
+    height: 150,
   },
   emptyDate: {
     height: 15,
     flex: 1,
     paddingTop: 30
+  },
+
+  crop_title:{
+    color: "green",
+    fontWeight: "bold"
   }
 });

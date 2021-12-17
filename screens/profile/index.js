@@ -6,6 +6,7 @@ import {ProfileBack} from "../../theme/background"
 import {ProfileText} from "../../theme/text"
 import CHANGE_PASSWORD from "./change_password"
 import EDIT_INFO from "./edit_info"
+import ReportScreen from "./report"
 
 class TableScreen extends React.Component{
 	constructor(props){
@@ -18,7 +19,7 @@ class TableScreen extends React.Component{
 
 	handlePasswordPress = (success=false) => {
 		if(success){
-			console.log("insuccess")
+			
 			this.setState({
 				editDialog: !this.state.editDialog,
 			})
@@ -91,6 +92,8 @@ class TableScreen extends React.Component{
 		     	
 		     </View>
 	    </View>
+
+	    <ReportScreen />
     </View>
   );
   }

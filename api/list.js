@@ -29,7 +29,7 @@ export async function main(user_id) {
 
 export async function crops(user_id) {
 	var token = store.getState().loginReducer.user.token
-	console.log("hereeee")
+	
 	try{
 		let rData = await fetch(`https://sfarmproject.herokuapp.com/crops`,{
 			method: 'GET',
@@ -56,7 +56,7 @@ export async function crops(user_id) {
 
 export async function chemicals() {
 	var token = store.getState().loginReducer.user.token
-	console.log("hereeee")
+	
 	try{
 		let rData = await fetch(`https://sfarmproject.herokuapp.com/chemicals`,{
 			method: 'GET',

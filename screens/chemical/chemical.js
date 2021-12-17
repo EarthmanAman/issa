@@ -17,6 +17,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.props.chemical_detail)
     return (
       <View style={IndvChemicalBack.main}> 
         <View>

@@ -1,7 +1,7 @@
 import {store} from "../redux/store"
 
 export async function login(username, password) {
-	console.log("in login")
+	
 	try{
 		let rToken = await fetch(`https://sfarmproject.herokuapp.com/accounts/login`,{
 			method: 'POST',
@@ -21,7 +21,7 @@ export async function login(username, password) {
 
 		
 		let token = await rToken.json();
-		console.log(token)
+		
 		rToken = null;
 		return token
 	}
@@ -33,7 +33,7 @@ export async function login(username, password) {
 }
 
 export async function register(username, first_name, last_name, email, password) {
-	console.log("in register")
+	
 	try{
 		let rToken = await fetch(`https://sfarmproject.herokuapp.com/accounts/register`,{
 			method: 'POST',
@@ -70,7 +70,7 @@ export async function register(username, first_name, last_name, email, password)
 
 
 export async function update_user(user_id, username, first_name, last_name, email) {
-	console.log("in update")
+	
 	try{
 		let rToken = await fetch(`https://sfarmproject.herokuapp.com/accounts/user_update/${user_id}`,{
 			method: 'POST',
@@ -105,7 +105,7 @@ export async function update_user(user_id, username, first_name, last_name, emai
 
 export async function change_password(user_id, old_pass, new_pass) {
 	var token = store.getState().loginReducer.user.token
-	console.log(token)
+	
 	try{
 		let rToken = await fetch(`https://sfarmproject.herokuapp.com/accounts/change_password/${user_id}`,{
 			method: 'PUT',

@@ -44,7 +44,7 @@ class ChemicalScreen extends Component {
         })
     }
   render() {
-      console.log(this.props.double)
+      
     return (
         <View style={ChemicalBack.main}>
         	<View>
@@ -78,9 +78,10 @@ class ChemicalScreen extends Component {
 
 				<ScrollView>
                     {this.state.double.map((chemical) => 
+                        <View style={ChemicalBack.other}>
                        <TouchableOpacity 
-                           style={ChemicalBack.other}
-                           onPress={() => this.handlePressed(chemical)}
+                           
+                           onPress={() => this.handlePressed(chemical.first)}
                         >
                         <View style={ChemicalBack.other_chem}>
                             <View>
@@ -91,7 +92,12 @@ class ChemicalScreen extends Component {
                                 <Text style={ChemicalText.my_chem_cat}>Category: Fertilizer</Text>
                             </View>
                         </View>
+                        </TouchableOpacity>
                         {chemical.second !== undefined ? 
+                         <TouchableOpacity 
+                           style={ChemicalBack.other}
+                           onPress={() => this.handlePressed(chemical.second)}
+                        >
                         <View style={ChemicalBack.other_chem}>
                             <View>
                                 <Image source={{uri: chemical.second.image}} style={ChemicalBack.other_chem_image}/>
@@ -100,11 +106,15 @@ class ChemicalScreen extends Component {
                                 <Text style={ChemicalText.my_chem_title}>{chemical.second.name}</Text>
                                 <Text style={ChemicalText.my_chem_cat}>Category: Fertilizer</Text>
                             </View>
-                        </View> : null}
+                        </View></TouchableOpacity>: null}
 
-                    </TouchableOpacity>
+                    
+                    </View>
                     )}
 					
+                    <View style={{height:400, width:300}}>
+                        
+                    </View>
 				</ScrollView>
         	</View>
 		</View>

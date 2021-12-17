@@ -22,7 +22,7 @@ const LoginReducer = (state={}, action) => {
 
 		case LOGIN_ERROR:
 			
-			return merge(state, {loginError:{main:action.payload[0]}})
+			return merge(state, {loginError:{main:action.payload[0]}, user:undefined})
 			break;
 		case LOGIN_ERROR_REMOVE:
 			
@@ -35,7 +35,7 @@ const LoginReducer = (state={}, action) => {
 
 		case REGISTER_ERROR:
 			
-			return merge(state, {registerError:{main:action.payload.errors}})
+			return merge(state, {registerError:{main:action.payload.errors}, user:undefined})
 			break;
 		case REGISTER_ERROR_REMOVE:
 			

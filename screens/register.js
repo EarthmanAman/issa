@@ -120,7 +120,7 @@ class RegisterScreen extends Component {
   	this.props.REGISTER_ERROR_REMOV()
   }
   render() {
-    console.log(this.props.errors)
+    
     return (
         <View style={RegisterBack.main}>
 			<View style={RegisterBack.topIcon}>

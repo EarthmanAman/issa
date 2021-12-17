@@ -22,7 +22,7 @@ import Schedules from "../schedule/schedule"
 
 class MyCropScreen extends Component {
   render() {
-  	console.log(this.props.my_crop_detail)
+  	
   	const statistics = this.props.my_crop_detail.statistics
     return (
         <View style={MyCropBack.main}>

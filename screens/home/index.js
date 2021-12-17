@@ -67,7 +67,7 @@ class HomeScreen extends Component {
   render() {
    
    const first = this.props.main.main_schedule
-   console.log(this.props.main)
+   
     return (
         <View style={HomeBack.main}>
           <ScrollView>
@@ -146,7 +146,9 @@ class HomeScreen extends Component {
           </View>
         )}
           
-          
+          <View style={{height:100, width:300}}>
+                        
+                    </View>
         </ScrollView>
       </View>
 

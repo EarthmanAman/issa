@@ -191,4 +191,14 @@ export const ProfileText = StyleSheet.create({
 		marginLeft: wp("3%")
 	},
 
+	table_cells: {
+		fontSize: 10,
+		
+	},
+
+	table_title: {
+		fontSize:10,
+		fontWeight: "bold"
+	}
+
 })

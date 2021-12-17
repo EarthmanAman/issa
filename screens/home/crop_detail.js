@@ -31,7 +31,7 @@ class CropDetail extends Component {
       if(nextProps.crop_add.status == 201){
 
         await this.props.MAIN_ACTION(nextProps.user.id)
-        console.log("success")
+        
         this.setState({
           spinner:false,
           date: null,
@@ -63,7 +63,7 @@ class CropDetail extends Component {
 
   render() {
 
-    console.log(this.props.crop_add)
+    
     return (
     <View style={CropDetailBack.main}>
 

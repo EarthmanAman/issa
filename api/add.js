@@ -1,5 +1,5 @@
 export async function create_crop(user, crop, date) {
-	console.log("in add")
+	
 	try{
 		let rToken = await fetch(`https://sfarmproject.herokuapp.com/crops/create`,{
 			method: 'POST',

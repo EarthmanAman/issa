@@ -33,9 +33,9 @@ class LoginScreen extends Component {
     
     if(nextProps.user){
       if(nextProps.user.token){
-
+        console.log(nextProps.errors)
       	await this.props.MAIN_ACTION(nextProps.user.id)
-      	console.log("success")
+      	
         this.setState({
         	spinner:false,
         	username: null,
